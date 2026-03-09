@@ -1,29 +1,20 @@
 ---
-title: "seminar_1"
-output: html_document
+title: "seminar_1(Inimkannatanutega liiklusõnnetuste andmed 2011-2025)"
+output: Rühm 4
 date: "2026-03-08"
 ---
+# Sissejuhatus 
+Käesolevas seminaritöös analüüsitakse andmestikku „Inimkannatanutega liiklusõnnetuste andmed 2011–2025“. Andmestik sisaldab informatsiooni Eestis toimunud liiklusõnnetuste kohta, mille tagajärjel on inimesed saanud vigastada või hukkunud. Andmed hõlmavad ajavahemikku 2011–2025 ning sisaldavad erinevaid tunnuseid, mis kirjeldavad õnnetuse toimumise aega, asukohta, tingimusi ja tagajärgi.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+Antud töö eesmärk on anda ülevaade andmestiku struktuurist ning analüüsida selles sisalduvaid tunnuseid. Töö käigus vaadeldakse tunnuste tüüpe, andmestiku suurust ning andmete kvaliteeti. Samuti viiakse läbi andmete puhastamine, mille käigus kontrollitakse duplikaate ja puuduvate väärtuste olemasolu ning tehakse vajalikud teisendused.
+
+Analüüsi tulemusena saadakse parem ülevaade liiklusõnnetuste andmestikust ning luuakse alus edasiseks statistiliseks analüüsiks ja võimalike seoste uurimiseks erinevate tunnuste vahel.
+
+
+# Andmete lugemine 
+Loeme andmeid R-i (Inimkannatanutega liiklusõnnetuste andmed 2011-2025.csv), andmestik Inimkannatanutega liiklusõnnetuste andmed 2011-2025.csv enne peab olema salvestatud sama kausta, kus asub teie rmd-fail
+
+```{r}
+liiklusõnnetuste <- read.csv2("Inimkannatanutega liiklusõnnetuste andmed 2011-2025.csv", dec = ".") 
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
